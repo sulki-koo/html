@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>form element</title>
+    <style>
+        input { display: block; }
+    </style>
+</head>
+<body>
+    <!-- 서버에 전송할 데이터 폼
+         action : 데이터를 전송할 서버의 URL
+         method : HTTP Method (=Request Method), GET/POST/PUT/PATCH/DELETE 
+    -->
+    <form action="10.formelement.html" method="get">
+        <input type="button" value="버튼">
+        <input type="checkbox" name="male" value="male">남
+        <input type="checkbox" name="female"  value="female">여
+        <input type="color" name="color">
+        <input type="date" name="date">
+        <input type="datetime-local" name="datetime-local">
+        <input type="email" name="email">
+        <input type="file" name="file">
+        <input type="hidden" name="hidden" value="hiddenvalue">
+        <input type="image" name="image" value="image" src="assets/jpg.jpg">
+        <input type="month" name="month">
+        <input type="number" name="number">
+        <input type="password" name="password">
+        <input type="radio" name="radio" value="apple">사과
+        <input type="radio" name="radio" value="peach">복숭아
+        <input type="radio" name="radio" value="grape">포도
+        <input type="range" name="range">
+        <input type="search" name="search">
+        <input type="tel" name="tel">
+        <input type="text" name="text">
+        <input type="time" name="time">
+        <input type="url" name="url">
+        <input type="week" name="week">
+
+        <select name="select">
+            <optgroup label="과일">
+                <option value="apple">사과</option>
+                <option value="peach">복숭아</option>
+                <option value="grape">포도</option>
+            </optgroup>
+            <optgroup label="동물">
+                <option value="lion">사자</option>
+                <option value="tiger">호랑이</option>
+                <option value="deer">사슴</option>
+            </optgroup>
+        </select>
+
+        <textarea cols="10" rows="20">여기에 입력하세요!</textarea>
+
+        <fieldset>
+            <legend>회원가입폼</legend>
+            아이디 : <input type="text">
+            비밀번호 : <input type="password">
+        </fieldset>
+
+        <input type="reset" value="폼초기화" name="uid">
+        <input type="submit" value="폼데이터전송" name="password">
+    </form>
+</body>
+</html>
+<!--
+http://127.0.0.1:5500/10.formelement.html
+?female=female
+&color=%23be00cc
+&date=2024-12-31
+&datetime-local=2024-12-31T11%3A40
+&email=ggg%40mail
+&file=%EC%84%9C%EC%9A%B8%EC%8B%9C+%EA%B0%95%EB%82%A8%EA%B5%AC+%ED%9D%A1%EC%97%B0%EB%AF%BC%EC%9B%90%EB%B0%8F+%EB%8B%A8%EC%86%8D%EA%B1%B4%EC%88%98+url.txt
+&hidden=hiddenvalue&month=2024-12
+&number=3
+&password=12456
+&radio=peach
+&range=91
+&search=%EC%8A%A4%EC%A6%88%EB%A9%94%EC%9D%98+%EB%AC%B8%EB%8B%A8%EC%86%8D
+&tel=dfkjgdlfkhjldkfg
+&text=skgjlksdnflsdf
+&time=11%3A41
+&url=https%3A%2F%2Fwww.google.com%2F
+&week=2024-W52
+-->
